@@ -237,14 +237,14 @@ var AngularColorPickerController = function () {
                 this.options.close.show = false;
             }
 
-            this.pickerDimensions = {
-                width: 150,
-                height: 150
+	    this.pickerDimensions = {
+                width: this.options.pickerWidth ? this.options.pickerWidth : 50,
+                height: this.options.pickerHeight ? this.options.pickerHeight : 150
             };
 
             this.sliderDimensions = {
-                width: this.options.horizontal ? this.pickerDimensions.width : 20,
-                height: this.options.horizontal ? 20 : this.pickerDimensions.height
+                width: this.options.horizontal ? this.pickerDimensions.height : 20,
+                height: this.options.horizontal ? 20 : this.pickerDimensions.width
             };
         }
     }, {
